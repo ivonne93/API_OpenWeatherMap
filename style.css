@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --border: 2px solid #333;
+    --white: #fff;
+    --black: #333;
+    --blue: blue;
+    --red: tomato;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(191, 252, 199);
+}
+
+.container {
+    width: 15rem;
+    height: 32.5rem;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+}
+
+/*cuando sea de dia*/
+.container.day {
+    background-image: url(./img/tiempo-dia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container.night {
+    background-image: url(./img/tiempo-lluvioso.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inputTemp {
+    margin: 1rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+    /*ocupe el 40% del contenedor*/
+}
+
+.search_submit {
+    display: flex;
+}
+
+.search_submit>button {
+    visibility: hidden;
+}
+
+.search {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.inputTemp_number {
+    display: flex;
+    align-items: center;
+}
+
+.inputTemp_celsius {
+    text-align: center;
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.inputTemp_symbol {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.location {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location_date {
+    margin: 1.5rem;
+}
+
+.inputTemp_description,
+.location_city {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+/*si tiene la clase night*/
+.container.night .inputTemp_description {
+    color: var(--white);
+}
+
+.container.night .location_city {
+    color: var(--white);
+}
+
+.container.night .location_city {
+    color: var(--white);
+}
+
+.container.night .weather_min,
+.container.night .weather_max {
+    color: var(--white);
+}
+
+.container.night .location_date {
+    color: var(--white);
+    font-weight: bolder;
+}
+
+.weather {
+    flex: 0.1;
+    border-top: var(--border);
+    display: flex;
+    justify-content: space-around;
+    /*espacio en el borde*/
+    align-items: center;
+}
+
+.weather_min>span {
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.weather_max>span {
+    font-size: 1.4rem;
+    color: var(--red);
+}

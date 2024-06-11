@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="container " id="container">
+
+        <div class="inputTemp">
+            <form class="search_submit" id="search_submit">
+                <input type="text" class="search" id="search_input" placeholder="Entra tu localozación....">
+                <button type="submit"></button>
+            </form>
+            <!--llenar desde js para los grados celsius-->
+            <div class="inputTemp_number">
+                <div class="inputTemp_celsius" id="degreeNumber">15</div>
+                <div class="inputTemp_symbol"> °C</div>
+            </div>
+            <!--poner un icono y descripcion-->
+            <div id="weatherIcon"></div>
+            <div class="inputTemp_description" id="description">Nu</div>
+        </div>
+        <div class="location">
+            <div class="location_city" id="timezone">London</div>
+            <div class="location_date" id="date">Fecha</div>
+        </div>
+        <div class="weather">
+            <div class="weather_min"><small>min</small><span id="min">12</span>°C</div>
+            <div class="weather_max"><small>max</small><span id="max">18</span>°C</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
